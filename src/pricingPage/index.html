@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind練習</title>
+  </head>
+  <body class="bg-[#E5E5E5] relative lg:min-h-screen">
+    <div class="p-4 lg:p-8">
+      <!-- header -->
+      <div
+        class="flex justify-between items-start lg:max-w-screen-xl lg:mx-auto"
+      >
+        <div class="text-4xl text-gray-800 tracking-wide">
+          <h1>Start Now</h1>
+          <p>
+            your
+            <span class="font-bold text-black tracking-normal">free plan.</span>
+          </p>
+        </div>
+        <button
+          id="loginBtn"
+          class="bg-primary text-white px-4 py-2 rounded-md tracking-wide active:bg-primary-dark active:ring-2 ring-offset-2 ring-primary duration-150 hover:bg-primary-dark"
+        >
+          Login
+        </button>
+      </div>
+      <!-- main -->
+      <div
+        class="mt-8 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:max-w-screen-xl lg:mx-auto"
+      >
+        <!-- card -->
+        <div
+          class="bg-secondary p-8 mb-4 rounded-2xl shadow-2xl hover:scale-105 duration-300 lg:flex lg:flex-col"
+        >
+          <h2 class="text-2xl font-bold">
+            Free <span>$0 </span
+            ><span class="font-normal text-base text-gray-600">per month</span>
+          </h2>
+          <div class="bg-primary w-[30px] h-[3px] my-2"></div>
+          <h3 class="font-bold my-6 text-lg">Plan includes:</h3>
+          <ul class="mb-16" id="list1"></ul>
+          <a href="#" class="block w-full font-bold text-center mb-4 lg:mt-auto"
+            >view all the features</a
+          >
+          <button
+            class="w-full bg-primary text-white text-lg py-3 rounded-lg tracking-wide"
+          >
+            Subscribe
+          </button>
+        </div>
+        <div
+          class="bg-primary text-white p-8 mb-4 rounded-2xl shadow-2xl hover:scale-105 duration-300 lg:flex lg:flex-col"
+        >
+          <h2 class="text-2xl font-bold">
+            Standard <span>$20 </span
+            ><span class="font-normal text-base">per month</span>
+          </h2>
+          <div class="bg-secondary w-[30px] h-[3px] my-2"></div>
+          <h3 class="font-bold my-6 text-lg">Plan includes:</h3>
+          <ul class="mb-16" id="list2"></ul>
+          <a href="#" class="block w-full font-bold text-center mb-4 lg:mt-auto"
+            >view all the features</a
+          >
+          <button
+            class="w-full bg-secondary text-black text-lg py-3 rounded-lg tracking-wide"
+          >
+            Subscribe
+          </button>
+        </div>
+        <div
+          class="bg-secondary p-8 mb-4 rounded-2xl shadow-2xl hover:scale-105 duration-300 lg:flex lg:flex-col"
+        >
+          <h2 class="text-2xl font-bold">
+            Pro <span>$50 </span
+            ><span class="font-normal text-base text-gray-600">per month</span>
+          </h2>
+          <div class="bg-primary w-[30px] h-[3px] my-2"></div>
+          <h3 class="font-bold my-6 text-lg">Plan includes:</h3>
+          <ul class="mb-16" id="list3"></ul>
+          <a href="#" class="block w-full font-bold text-center mb-4 lg:mt-auto"
+            >view all the features</a
+          >
+          <button
+            class="w-full bg-primary text-white text-lg py-3 rounded-lg tracking-wide"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- login modal -->
+    <div
+      class="absolute inset-0 bg-black/70 flex justify-center items-start duration-200 lg:items-center opacity-0 pointer-events-none"
+      id="loginModal"
+    >
+      <div
+        class="w-[90%] lg:w-[500px] bg-white p-4 mt-40 lg:mt-0"
+        id="modalBody"
+      >
+        <p class="text-3xl my-4 font- text-center">LOGIN</p>
+        <form action="post">
+          <label for="username">Username</label>
+          <input
+            class="w-full border-2 border-gray-300 rounded-md my-2 focus:border-primary focus:ring-primary"
+            type="text"
+            name="username"
+            placeholder="請輸入使用者名稱"
+          />
+          <label for="password">Password</label>
+          <input
+            class="w-full border-2 border-gray-300 rounded-md mt-2 focus:border-primary focus:ring-primary"
+            type="password"
+            name="password"
+            placeholder="請輸入使用者密碼"
+          />
+          <div class="flex items-center my-4">
+            <input
+              class="mr-2 text-primary focus:ring-primary"
+              type="checkbox"
+              name="saveUsername"
+            />
+            <label for="saveUsername">Remember my Username</label>
+          </div>
+        </form>
+        <button
+          class="w-full bg-primary text-white text-lg py-3 mt-4 rounded-lg tracking-wide"
+          id="closeModal"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
